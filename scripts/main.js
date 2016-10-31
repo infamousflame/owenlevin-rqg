@@ -10,8 +10,12 @@ var noun = [{noun:"cat "}, {noun:"dog "}, {noun:"parrot "}, {noun:"key "}];
 var word = [{word:"wanted "}, {word: "had "}, {word:"needed "}, {word:"longed "}];
 var anotherNoun = [{noun:"cheese "}, {noun: "xbone "}, {noun:"death "}, {noun: "meme "}];
 
+
+function randomNum(){
+    return Math.floor((Math.random() * noun.length));
+}
 function generateSentence(){
     
-    quoteArea.textContent = "The " + noun[Math.floor((Math.random() * noun.length))].noun + word[Math.floor((Math.random() * word.length))].word + anotherNoun[Math.floor((Math.random() * anotherNoun.length))].noun;
+    quoteArea.textContent = "The " + noun[randomNum()].noun + word[randomNum()].word + anotherNoun[randomNum()].noun;
     document.body.appendChild(quoteArea);
 }
